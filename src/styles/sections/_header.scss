@@ -1,0 +1,52 @@
+.header {
+    height: 800px;
+    position: relative;
+    background-image: url(./../img/header/header-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.header__wrapper {
+    border-bottom: 0.5px solid #878787;
+    position: relative;
+}
+
+.header__content {
+    text-align: center;
+    position: relative;
+    padding-top: 160px;
+
+}
+
+.header__title {
+    font-weight: 300;
+    font-size: 140px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.header__description {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.35;
+    color: #fff;
+}
+
+.header__scroll {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding-bottom: 50px;
+}

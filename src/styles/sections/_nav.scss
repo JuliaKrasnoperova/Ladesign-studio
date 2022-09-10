@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.nav__list {
+    display: flex;
+    gap: 50px;
+
+}
+
+.nav__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #fff;
+}
