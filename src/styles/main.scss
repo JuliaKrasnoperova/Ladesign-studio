@@ -5,6 +5,12 @@
 // Sections
 @import "./sections/header";
 @import "./sections/nav";
+@import "./sections/_about";
+@import "./sections/_portfolio";
+
 
 // Blocks 
 @import "./blocks/logo";
+@import "./blocks/accordion";
+@import "./blocks/title";
+@import "./blocks/tab";

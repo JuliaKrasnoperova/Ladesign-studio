@@ -1,0 +1,26 @@
+.about {
+    padding-top: 150px;
+}
+
+.about__title {
+    margin-bottom: 50px;
+}
+
+.about__text {
+    max-width: 520px;
+    margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #777777;
+}
+
+.about__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-image img {
+    width: 100%;
+}
