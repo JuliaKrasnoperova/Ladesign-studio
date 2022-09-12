@@ -43,25 +43,39 @@ html(lang="en")
     section.portfolio 
       .container 
         h2.portfolio__title.title Портфолио
-        .tab 
-          .tab__buttons
-            .tab__btn все работы
-            .tab__btn квартиры
-            .tab__btn дома
-            .tab__btn коммерческие помещения
-          .tab__body 
-            .tab__content 
-              h1 Hello 
-              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid modi voluptate ipsa veniam, deleniti delectus minus totam! Enim quis harum accusamus similique? Laudantium similique, sint unde autem placeat qui eum?
-            .tab__content 
-              h1 Hello 
-              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid modi voluptate ipsa veniam, deleniti delectus minus totam! Enim quis harum accusamus similique? Laudantium similique, sint unde autem placeat qui eum?
-            .tab__content 
-              h1 Hello 
-              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid modi voluptate ipsa veniam, deleniti delectus minus totam! Enim quis harum accusamus similique? Laudantium similique, sint unde autem placeat qui eum?
-            .tab__content 
-              h1 Hello 
-              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid modi voluptate ipsa veniam, deleniti delectus minus totam! Enim quis harum accusamus similique? Laudantium similique, sint unde autem placeat qui eum?
+        .tabs 
+          .tabs__header 
+            .tabs__nav-item.active(data-tab="tab-1") Все работы
+            .tabs__nav-item(data-tab="tab-2")  Квартиры
+            .tabs__nav-item(data-tab="tab-3")  Дома
+            .tabs__nav-item(data-tab="tab-4")  Коммерческие помещения
+          .tabs__body 
+            .tabs__content.active.tab-1
+              .tabs__content-flex
+                .tabs__content-wrapper
+                  .tabs__link-wrapper 
+                    a.tabs__link(href="#")
+                      img(src="./img/tabs/1.png" alt="image")
+                    .div 
+                      a.tabs__link(href="#")
+                        img(src="./img/tabs/2.png" alt="image")
+                      a.tabs__link(href="#")
+                        img(src="./img/tabs/3.png" alt="")
+                  a.tabs__link(href="#")
+                    img(src="./img/tabs/4.png" alt="image")
+                .tabs__content-wrapper
+                  .div
+                    a.tabs__link(href="#")
+                      img(src="./img/tabs/5.png" alt="image")
+                    a.tabs__link(href="#")
+                      img(src="./img/tabs/6.png" alt="image")
+                  a.tabs__link(href="#")
+                    img(src="./img/tabs/7.png" alt="image")
+
+            .tabs__content.tab-2 hello
+            .tabs__content.tab-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum hic maxime eligendi magni, recusandae facere eius eaque in possimus atque odio et quae accusantium eveniet commodi placeat totam beatae saepe?
+            .tabs__content.tab-4 hello
+
 
 
     script(src="./js/main.min.js")

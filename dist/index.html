@@ -72,30 +72,29 @@
     <section class="portfolio"> 
       <div class="container"> 
         <h2 class="portfolio__title title">Портфолио</h2>
-        <div class="tab"> 
-          <div class="tab__buttons">
-            <div class="tab__btn">все работы</div>
-            <div class="tab__btn">квартиры</div>
-            <div class="tab__btn">дома</div>
-            <div class="tab__btn">коммерческие помещения</div>
+        <div class="tabs"> 
+          <div class="tabs__header"> 
+            <div class="tabs__nav-item active" data-tab="tab-1">Все работы</div>
+            <div class="tabs__nav-item" data-tab="tab-2"> Квартиры</div>
+            <div class="tabs__nav-item" data-tab="tab-3"> Дома</div>
+            <div class="tabs__nav-item" data-tab="tab-4"> Коммерческие помещения</div>
           </div>
-          <div class="tab__body"> 
-            <div class="tab__content"> 
-              <h1>Hello </h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid modi voluptate ipsa veniam, deleniti delectus minus totam! Enim quis harum accusamus similique? Laudantium similique, sint unde autem placeat qui eum?</p>
+          <div class="tabs__body"> 
+            <div class="tabs__content active tab-1">
+              <div class="tabs__content-flex">
+                <div class="tabs__content-wrapper">
+                  <div class="tabs__link-wrapper"> <a class="tabs__link" href="#"><img src="./img/tabs/1.png" alt="image"></a>
+                    <div class="div"> <a class="tabs__link" href="#"><img src="./img/tabs/2.png" alt="image"></a><a class="tabs__link" href="#"><img src="./img/tabs/3.png" alt=""></a></div>
+                  </div><a class="tabs__link" href="#"><img src="./img/tabs/4.png" alt="image"></a>
+                </div>
+                <div class="tabs__content-wrapper">
+                  <div class="div"><a class="tabs__link" href="#"><img src="./img/tabs/5.png" alt="image"></a><a class="tabs__link" href="#"><img src="./img/tabs/6.png" alt="image"></a></div><a class="tabs__link" href="#"><img src="./img/tabs/7.png" alt="image"></a>
+                </div>
+              </div>
             </div>
-            <div class="tab__content"> 
-              <h1>Hello </h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid modi voluptate ipsa veniam, deleniti delectus minus totam! Enim quis harum accusamus similique? Laudantium similique, sint unde autem placeat qui eum?</p>
-            </div>
-            <div class="tab__content"> 
-              <h1>Hello </h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid modi voluptate ipsa veniam, deleniti delectus minus totam! Enim quis harum accusamus similique? Laudantium similique, sint unde autem placeat qui eum?</p>
-            </div>
-            <div class="tab__content"> 
-              <h1>Hello </h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid modi voluptate ipsa veniam, deleniti delectus minus totam! Enim quis harum accusamus similique? Laudantium similique, sint unde autem placeat qui eum?</p>
-            </div>
+            <div class="tabs__content tab-2">hello</div>
+            <div class="tabs__content tab-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum hic maxime eligendi magni, recusandae facere eius eaque in possimus atque odio et quae accusantium eveniet commodi placeat totam beatae saepe?</div>
+            <div class="tabs__content tab-4">hello</div>
           </div>
         </div>
       </div>
