@@ -1,6 +1,6 @@
 .tabs {}
 
-.tabs__header {
+.tabs__nav {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #D5D5D5;
@@ -32,34 +32,46 @@
 }
 
 .tabs__content.active {
-    display: block;
-}
-
-.tabs__link-wrapper div {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.tabs__link-wrapper {
-    display: flex;
-    gap: 30px;
-}
-
-.tabs__content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.tabs__content-wrapper div {
-    display: flex;
-    gap: 30px;
-
-}
-
-.tabs__content-flex {
     display: flex;
     justify-content: center;
     gap: 30px;
+
+}
+
+.tabs__content-left div:first-child {
+    display: flex;
+    gap: 30px;
+}
+
+
+.tabs__content-left div:nth-child(3) {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tabs__content-left div:nth-child(3) div {
+    width: 210px;
+}
+
+
+.tabs__content-left div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tabs__content-right div:first-child {
+    display: flex;
+    gap: 30px;
+}
+
+.tabs__content-right div:nth-child(3) {
+    width: 450px;
+    height: 210px;
+    margin-top: 30px;
+}
+
+.tabs__content-img {
+    margin-top: 30px;
 }

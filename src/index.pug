@@ -1,84 +1,92 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-    // styles
-    link(rel="stylesheet" href="./css/style.min.css")
-    title Document
-  body 
-    include pug/modules/header.pug
+        // styles
+        link(rel="stylesheet" href="./css/style.min.css")
+        title Document
+    body 
+        include pug/modules/header.pug
 
-    section.about
-      .container 
-        h2.about__title.title Наша команда дает уверенность
-        .about__wrapper.container
-          .accordion
-            .about__text 
-              p Дизайн-проект от студии LA Design не только совершенен по дизайну, но и реализуем
-            .accordion__item
-              .accordion__title Каждый проект уникален
-              .accordion__text 
-                p Дизайнеры и архитекторы студии не работают по шаблону, учитывают все пожелания и не копируют работы из чужих портфолио
-            .accordion__item
-              .accordion__title Полное сопровождение
-              .accordion__text
-                p Клиент может заказать услугу по авторскому надзору и вообще не приезжать на объект. Мы будем контролировать и корректировать ход выполнения ремонтных работ согласно дизайн-проекту
-            .accordion__item
-              .accordion__title Согласование перепланировки
-              .accordion__text
-                p Поможем согласовать любые планировочные решения, которые не противоречат закону. Возьмем на себя все бумажные вопросы, чтобы освободить ваше время
-            .accordion__item
-              .accordion__title Техническая документация
-              .accordion__text
-                p Готовим полный пакет документов, который гарантирует ответственный подход к работе и высокое качество реализованного дизайн-проекта
-            .accordion__item
-              .accordion__title Строгая политика конфиденциальности
-              .accordion__text
-                p Обеспечиваем защиту персональных данных заказчиков и не раскрываем их третьим лицам.
-          .about__image
-            img(src="./img/about/about-image.png" alt="image")
-    section.portfolio 
-      .container 
-        h2.portfolio__title.title Портфолио
-        .tabs 
-          .tabs__header 
-            .tabs__nav-item.active(data-tab="tab-1") Все работы
-            .tabs__nav-item(data-tab="tab-2")  Квартиры
-            .tabs__nav-item(data-tab="tab-3")  Дома
-            .tabs__nav-item(data-tab="tab-4")  Коммерческие помещения
-          .tabs__body 
-            .tabs__content.active.tab-1
-              .tabs__content-flex
-                .tabs__content-wrapper
-                  .tabs__link-wrapper 
-                    a.tabs__link(href="#")
-                      img(src="./img/tabs/1.png" alt="image")
-                    .div 
-                      a.tabs__link(href="#")
-                        img(src="./img/tabs/2.png" alt="image")
-                      a.tabs__link(href="#")
-                        img(src="./img/tabs/3.png" alt="")
-                  a.tabs__link(href="#")
-                    img(src="./img/tabs/4.png" alt="image")
-                .tabs__content-wrapper
-                  .div
-                    a.tabs__link(href="#")
-                      img(src="./img/tabs/5.png" alt="image")
-                    a.tabs__link(href="#")
-                      img(src="./img/tabs/6.png" alt="image")
-                  a.tabs__link(href="#")
-                    img(src="./img/tabs/7.png" alt="image")
+        section.about
+            .container 
+                h2.about__title.title Наша команда дает уверенность
+                .about__wrapper.container
+                    .accordion
+                        .about__text 
+                            p Дизайн-проект от студии LA Design не только совершенен по дизайну, но и реализуем
+                        .accordion__item
+                            .accordion__title Каждый проект уникален
+                            .accordion__text 
+                                p Дизайнеры и архитекторы студии не работают по шаблону, учитывают все пожелания и не копируют работы из чужих портфолио
+                        .accordion__item
+                            .accordion__title Полное сопровождение
+                            .accordion__text
+                                p Клиент может заказать услугу по авторскому надзору и вообще не приезжать на объект. Мы будем контролировать и корректировать ход выполнения ремонтных работ согласно дизайн-проекту
+                        .accordion__item
+                            .accordion__title Согласование перепланировки
+                            .accordion__text
+                                p Поможем согласовать любые планировочные решения, которые не противоречат закону. Возьмем на себя все бумажные вопросы, чтобы освободить ваше время
+                        .accordion__item
+                            .accordion__title Техническая документация
+                            .accordion__text
+                                p Готовим полный пакет документов, который гарантирует ответственный подход к работе и высокое качество реализованного дизайн-проекта
+                        .accordion__item
+                            .accordion__title Строгая политика конфиденциальности
+                            .accordion__text
+                                p Обеспечиваем защиту персональных данных заказчиков и не раскрываем их третьим лицам.
+                    .about__image
+                        img(src="./img/about/about-image.png" alt="image")
+        section.portfolio 
+            .container 
+                h2.portfolio__title.title Портфолио
+                .tabs 
+                    .tabs__nav
+                        .tabs__nav-item.active(data-tab="tab-1") Все работы
+                        .tabs__nav-item(data-tab="tab-2")  Квартиры
+                        .tabs__nav-item(data-tab="tab-3")  Дома
+                        .tabs__nav-item(data-tab="tab-4")  Коммерческие помещения
+                    .tabs__body 
+                        .tabs__content.active.tab-1
+                            .tabs__content-left 
+                                div
+                                    div.tabs__content-image
+                                        img(src="./img/tabs/1.png" alt="image")
+                                    div
+                                        .tabs__content-image
+                                            img(src="./img/tabs/2.png" alt="image")
+                                        .tabs__content-image
+                                            img(src="./img/tabs/3.png" alt="image")
+                                div.tabs__content-image.tabs__content-img
+                                    img(src="./img/tabs/4.png" alt="image")
+                                div
+                                    div.tabs__content-image
+                                        img(src="./img/tabs/8.png" alt="image")
+                                    div.tabs__content-image
+                                        img(src="./img/tabs/9.png" alt="image")
+                            .tabs__content-right 
+                                div
+                                    .tabs__content-image
+                                        img(src="./img/tabs/5.png" alt="image")
+                                    .tabs__content-image
+                                        img(src="./img/tabs/6.png" alt="image")
+                                div.tabs__content-image.tabs__content-img
+                                    img(src="./img/tabs/7.png" alt="image")
+                                div.tabs__content-image
+                                    img(src="./img/tabs/10.png" alt="image")
 
-            .tabs__content.tab-2 hello
-            .tabs__content.tab-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum hic maxime eligendi magni, recusandae facere eius eaque in possimus atque odio et quae accusantium eveniet commodi placeat totam beatae saepe?
-            .tabs__content.tab-4 hello
+
+
+                        .tabs__content.tab-2 hello
+                        .tabs__content.tab-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum hic maxime eligendi magni, recusandae facere eius eaque in possimus atque odio et quae accusantium eveniet commodi placeat totam beatae saepe?
+                        .tabs__content.tab-4 hello
 
 
 
-    script(src="./js/main.min.js")
+        script(src="./js/main.min.js")
 
 
 
