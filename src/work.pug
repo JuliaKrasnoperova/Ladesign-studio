@@ -1,0 +1,102 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+        // styles
+        link(rel="stylesheet" href="./css/style.min.css")
+        title Главная
+    body 
+        include pug/modules/header-work.pug
+        section.description 
+            .container 
+                .description__title
+                    h2 Дизайн 1-комнатной квартиры<br>в стиле loft
+                .description__wrapper 
+                    .description__table 
+                        .description__table-item 
+                            div.description__table-header Для кого
+                            span молодой мужчина
+                        .description__table-item 
+                            div.description__table-header общая площадь
+                            span 60м2
+                        .description__table-item 
+                            div.description__table-header место расположения
+                            span Краснодар
+                        .description__table-item 
+                            div.description__table-header срок выполнения
+                            span 1 месяц
+                    .description__text 
+                        p В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями. В интерьере использовано довольно много различных материалов и текстур. Однако благодаря тому, что каждый материал применяется не единожды и находит себе продолжение в других помещениях, квартира смотрится цельным объёмом, где все текстуры дополняют друг друга и сочетаются между собой.
+        section.container.slider
+            .slider__item
+                img(src="./img/slider/1.png" alt="image")
+            .slider__item
+                img(src="./img/slider/2.png" alt="image")
+            .slider__item
+                img(src="./img/slider/03.png" alt="image")
+
+            button.slider__left(type="button" onclick="previousSlide()")
+                img(src="./img/slider/arrow-left.svg" alt="left")
+            button.slider__rigth(type="button" onclick="nextSlide()")
+                img(src="./img/slider/arrow-right.svg" alt="right")
+        section.info 
+            .container 
+                h3.info__title.title-h3 практичность и рациональное использование<br>каждого квадратного метра
+                .info__wrapper 
+                    .info__text 
+                        .info__text-title.title-h4 Задача
+                        p В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+                    .info__text 
+                        .info__text-title.title-h4 решение
+                        p В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+                        p В интерьере использовано довольно много различных материалов и текстур. Однако благодаря тому, что каждый материал применяется не единожды и находит себе продолжение в других помещениях, квартира смотрится цельным объёмом, где все текстуры дополняют друг друга и сочетаются между собой.
+        .info__bg
+            img(src="./img/info/info-bg.png" alt="image")
+        section.features.container 
+            .info__text-title.title-h4 особенности проекта
+            .info__wrapper 
+                .info__text 
+                    p В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+                    p В интерьере использовано довольно много различных материалов и текстур.
+                .info__text 
+                    p В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.
+        .container.features__grid 
+            .features__grid-item
+                img(src="./img/info/01.png" alt="image")
+            .features__grid-item
+                img(src="./img/info/02.png" alt="image")
+            .features__grid-item
+                img(src="./img/info/03.png" alt="image")
+            .features__grid-item
+                img(src="./img/info/04.png" alt="image")
+        .projects.container 
+            h3.title-h3.projects__title похожие проекты
+            .projects__wrapper 
+                .projects__item
+                    img(src="./img/projects/01.png" alt="image")
+                .projects__item
+                    img(src="./img/projects/02.png" alt="image")
+                .projects__item
+                    img(src="./img/projects/03.png" alt="image")
+                .projects__item
+                    img(src="./img/projects/04.png" alt="image")
+
+
+
+
+
+
+
+
+        include pug/modules/request.pug
+        include pug/modules/footer.pug
+
+
+
+        script(src="./js/main.min.js")
+
+
+

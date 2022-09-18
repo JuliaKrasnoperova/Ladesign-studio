@@ -1,0 +1,44 @@
+.header-work {
+    height: 800px;
+    position: relative;
+    background-image: url(./../img/work/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 75px;
+}
+
+.header-work::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.header-work__title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 1.175;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 26px;
+}
+
+.header-work__description {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.35;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+}
+
+.header-work__content {
+    text-align: center;
+    position: relative;
+    padding-top: 250px;
+
+}

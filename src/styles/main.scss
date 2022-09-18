@@ -4,10 +4,16 @@
 
 // Sections
 @import "./sections/header";
+@import "./sections/header-work";
 @import "./sections/nav";
 @import "./sections/navigation";
 @import "./sections/_about";
 @import "./sections/_portfolio";
+@import "./sections/description";
+@import "./sections/slider";
+@import "./sections/_info";
+@import "./sections/features";
+@import "./sections/projects";
 @import "./sections/request";
 @import "./sections/footer";
 
@@ -15,5 +21,7 @@
 // Blocks 
 @import "./blocks/logo";
 @import "./blocks/accordion";
-@import "./blocks/title";
+@import "./blocks/title-h2";
+@import "./blocks/_title-h3";
+@import "./blocks/title-h4";
 @import "./blocks/tabs";

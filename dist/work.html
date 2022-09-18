@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles-->
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Главная</title>
+  </head>
+  <body> 
+    <header class="header-work"> 
+      <div class="header__wrapper">
+        <nav class="nav container"><a class="logo" href="index.html"><img src="./img/header/logo.svg" alt="logo"></a>
+          <ul class="nav__list"> 
+            <li><a class="nav__link" href="portfolio.html">Портфолио</a></li>
+            <li><a class="nav__link" href="work.html">услуги и цены</a></li>
+            <li><a class="nav__link" href="">контакты</a></li>
+          </ul>
+          <div class="nav__tel"><a class="nav__link" href="tel:+79184123443">+7 918 412-34-43</a></div>
+        </nav>
+      </div>
+      <div class="header-work__content"> 
+        <h1 class="header-work__title">Loft</h1>
+        <div class="header-work__description">Unique collection</div>
+      </div>
+    </header>
+    <section class="description"> 
+      <div class="container"> 
+        <div class="description__title">
+          <h2>Дизайн 1-комнатной квартиры<br>в стиле loft</h2>
+        </div>
+        <div class="description__wrapper"> 
+          <div class="description__table"> 
+            <div class="description__table-item"> 
+              <div class="description__table-header">Для кого</div><span>молодой мужчина</span>
+            </div>
+            <div class="description__table-item"> 
+              <div class="description__table-header">общая площадь</div><span>60м2</span>
+            </div>
+            <div class="description__table-item"> 
+              <div class="description__table-header">место расположения</div><span>Краснодар</span>
+            </div>
+            <div class="description__table-item"> 
+              <div class="description__table-header">срок выполнения</div><span>1 месяц</span>
+            </div>
+          </div>
+          <div class="description__text"> 
+            <p>В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями. В интерьере использовано довольно много различных материалов и текстур. Однако благодаря тому, что каждый материал применяется не единожды и находит себе продолжение в других помещениях, квартира смотрится цельным объёмом, где все текстуры дополняют друг друга и сочетаются между собой.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container slider">
+      <div class="slider__item"><img src="./img/slider/1.png" alt="image"></div>
+      <div class="slider__item"><img src="./img/slider/2.png" alt="image"></div>
+      <div class="slider__item"><img src="./img/slider/03.png" alt="image"></div>
+      <button class="slider__left" type="button" onclick="previousSlide()"><img src="./img/slider/arrow-left.svg" alt="left"></button>
+      <button class="slider__rigth" type="button" onclick="nextSlide()"><img src="./img/slider/arrow-right.svg" alt="right"></button>
+    </section>
+    <section class="info"> 
+      <div class="container"> 
+        <h3 class="info__title title-h3">практичность и рациональное использование<br>каждого квадратного метра</h3>
+        <div class="info__wrapper"> 
+          <div class="info__text"> 
+            <div class="info__text-title title-h4">Задача</div>
+            <p>В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.</p>
+          </div>
+          <div class="info__text"> 
+            <div class="info__text-title title-h4">решение</div>
+            <p>В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.</p>
+            <p>В интерьере использовано довольно много различных материалов и текстур. Однако благодаря тому, что каждый материал применяется не единожды и находит себе продолжение в других помещениях, квартира смотрится цельным объёмом, где все текстуры дополняют друг друга и сочетаются между собой.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="info__bg"><img src="./img/info/info-bg.png" alt="image"></div>
+    <section class="features container"> 
+      <div class="info__text-title title-h4">особенности проекта</div>
+      <div class="info__wrapper"> 
+        <div class="info__text"> 
+          <p>В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.</p>
+          <p>В интерьере использовано довольно много различных материалов и текстур.</p>
+        </div>
+        <div class="info__text"> 
+          <p>В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями.</p>
+        </div>
+      </div>
+    </section>
+    <div class="container features__grid"> 
+      <div class="features__grid-item"><img src="./img/info/01.png" alt="image"></div>
+      <div class="features__grid-item"><img src="./img/info/02.png" alt="image"></div>
+      <div class="features__grid-item"><img src="./img/info/03.png" alt="image"></div>
+      <div class="features__grid-item"><img src="./img/info/04.png" alt="image"></div>
+    </div>
+    <div class="projects container"> 
+      <h3 class="title-h3 projects__title">похожие проекты</h3>
+      <div class="projects__wrapper"> 
+        <div class="projects__item"><img src="./img/projects/01.png" alt="image"></div>
+        <div class="projects__item"><img src="./img/projects/02.png" alt="image"></div>
+        <div class="projects__item"><img src="./img/projects/03.png" alt="image"></div>
+        <div class="projects__item"><img src="./img/projects/04.png" alt="image"></div>
+      </div>
+    </div>
+    <section class="request">
+      <div class="container"> <a class="request__link" href="#">
+          <h3>оставить заявку на проект</h3></a></div>
+    </section>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer__socials"> <a href="#">houzz</a><a href="#">instagram</a></div>
+        <div class="footer__copy">© 2022 LA Design, all rights reserved.</div>
+      </div>
+    </footer>
+    <script src="./js/main.min.js"></script>
+  </body>
+</html>
