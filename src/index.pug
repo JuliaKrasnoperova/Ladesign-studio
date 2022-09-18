@@ -11,7 +11,7 @@ html(lang="en")
     body 
         include pug/modules/header.pug
 
-        section.about
+        section.about#about
             .container 
                 h2.about__title.title Наша команда дает уверенность
                 .about__wrapper.container
@@ -40,49 +40,9 @@ html(lang="en")
                                 p Обеспечиваем защиту персональных данных заказчиков и не раскрываем их третьим лицам.
                     .about__image
                         img(src="./img/about/about-image.png" alt="image")
-        section.portfolio 
-            .container 
-                h2.portfolio__title.title Портфолио
-                .tabs 
-                    .tabs__nav
-                        .tabs__nav-item.active(data-tab="tab-1") Все работы
-                        .tabs__nav-item(data-tab="tab-2")  Квартиры
-                        .tabs__nav-item(data-tab="tab-3")  Дома
-                        .tabs__nav-item(data-tab="tab-4")  Коммерческие помещения
-                    .tabs__body 
-                        .tabs__content.active.tab-1
-                            .tabs__content-left 
-                                div
-                                    div.tabs__content-image
-                                        img(src="./img/tabs/1.png" alt="image")
-                                    div
-                                        .tabs__content-image
-                                            img(src="./img/tabs/2.png" alt="image")
-                                        .tabs__content-image
-                                            img(src="./img/tabs/3.png" alt="image")
-                                div.tabs__content-image.tabs__content-img
-                                    img(src="./img/tabs/4.png" alt="image")
-                                div
-                                    div.tabs__content-image
-                                        img(src="./img/tabs/8.png" alt="image")
-                                    div.tabs__content-image
-                                        img(src="./img/tabs/9.png" alt="image")
-                            .tabs__content-right 
-                                div
-                                    .tabs__content-image
-                                        img(src="./img/tabs/5.png" alt="image")
-                                    .tabs__content-image
-                                        img(src="./img/tabs/6.png" alt="image")
-                                div.tabs__content-image.tabs__content-img
-                                    img(src="./img/tabs/7.png" alt="image")
-                                div.tabs__content-image
-                                    img(src="./img/tabs/10.png" alt="image")
-
-
-
-                        .tabs__content.tab-2 hello
-                        .tabs__content.tab-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum hic maxime eligendi magni, recusandae facere eius eaque in possimus atque odio et quae accusantium eveniet commodi placeat totam beatae saepe?
-                        .tabs__content.tab-4 hello
+        include pug/modules/portfolio.pug
+        include pug/modules/request.pug
+        include pug/modules/footer.pug
 
 
 

@@ -1,0 +1,36 @@
+.footer {
+    padding-top: 95px;
+    padding-bottom: 95px;
+    text-align: center;
+    background: #F7F7F7;
+}
+
+.footer__socials a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: #3D3D3D;
+    transition: 0.3s;
+
+    &:hover {
+        color: #3D3D3D;
+    }
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer__copy {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    color: #878787;
+
+}

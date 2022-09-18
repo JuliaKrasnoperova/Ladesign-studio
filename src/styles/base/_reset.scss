@@ -72,7 +72,7 @@ ul {
 img,
 svg {
 	display: block;
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 }
 
@@ -118,4 +118,8 @@ legend {
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
 }

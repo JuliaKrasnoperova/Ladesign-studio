@@ -24,3 +24,18 @@
         color: #fff;
     }
 }
+
+.nav__tel a {
+    position: relative;
+}
+
+.nav__tel a::before {
+    content: "";
+    background-image: url(../img/header/tel-white.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 25px;
+    top: -6px;
+    left: -31px;
+}

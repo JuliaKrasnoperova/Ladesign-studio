@@ -1,0 +1,32 @@
+.request {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    text-align: center;
+}
+
+.request__link {
+    position: relative;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 1.175;
+    text-transform: uppercase;
+    color: #3D3D3D;
+    transition: 0.3s;
+    border-bottom: 1px solid #D5D5D5;
+
+    &:hover {
+        color: #3D3D3D;
+    }
+}
+
+.request__link::after {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 8px;
+    right: -21px;
+    content: "";
+    background-image: url(../img/request/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
