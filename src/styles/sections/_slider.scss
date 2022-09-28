@@ -2,14 +2,14 @@
     max-width: 90%;
     position: relative;
     margin: auto;
-    height: 700px;
+
 }
 
 /* Картинка масштабируется по отношению к родительскому элементу */
 .slider .slider__item img {
     object-fit: cover;
     width: 100%;
-    height: 700px;
+
 }
 
 /* Кнопки вперед и назад */
