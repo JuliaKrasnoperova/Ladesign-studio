@@ -7,6 +7,7 @@ html(lang="en")
 
         // styles
         link(rel="stylesheet" href="./css/style.min.css")
+        link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
         title О работе
     body 
         include pug/modules/header-work.pug
@@ -36,7 +37,11 @@ html(lang="en")
             .slider__item
                 img(src="./img/slider/2.png" alt="image")
             .slider__item
-                img(src="./img/slider/03.png" alt="image")
+                img(src="./img/slider/loft-1.png" alt="image")
+            .slider__item
+                img(src="./img/slider/loft-2.png" alt="image")
+            .slider__item
+                img(src="./img/slider/loft-3.png" alt="image")
 
             button.slider__left(type="button" onclick="previousSlide()")
                 img(src="./img/slider/arrow-left.svg" alt="left")
@@ -74,20 +79,10 @@ html(lang="en")
                 img(src="./img/info/04.png" alt="image")
         .projects.container 
             h3.title-h3.projects__title похожие проекты
-            .projects__wrapper 
-                .projects__item
-                    img(src="./img/projects/01.png" alt="image")
-                .projects__item
-                    img(src="./img/projects/02.png" alt="image")
-                .projects__item
-                    img(src="./img/projects/03.png" alt="image")
-                .projects__item
-                    img(src="./img/projects/04.png" alt="image")
 
-
+        include pug/modules/carousel.pug
         include pug/modules/request.pug
         include pug/modules/footer.pug
-
 
 
         script(src="./js/main.min.js")
