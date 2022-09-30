@@ -1,0 +1,28 @@
+.button {
+    position: relative;
+    height: 50px;
+    padding: 0 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #393246;
+    border: 1px solid #393246;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+
+
+}
+
+.button::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/prices/arrow-white.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 8px;
+    height: 8px;
+    right: 25%;
+    top: 18px;
+}

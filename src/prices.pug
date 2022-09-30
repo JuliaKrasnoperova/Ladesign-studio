@@ -54,6 +54,7 @@ html(lang="en")
                                     li -
                         button.prices__button(type="button") Заказать
                     .prices__item.prices__item-pro
+                        .prices__item-pro-note recommend
                         div.prices__container
                             div
                                 .prices__header PRO
@@ -91,16 +92,8 @@ html(lang="en")
                         button.prices__button(type="button") Заказать
         .projects.container 
             h3.title-h3.projects__title похожие проекты
-            .projects__wrapper 
-                .projects__item
-                    img(src="./img/projects/01.png" alt="image")
-                .projects__item
-                    img(src="./img/projects/02.png" alt="image")
-                .projects__item
-                    img(src="./img/projects/03.png" alt="image")
-                .projects__item
-                    img(src="./img/projects/04.png" alt="image")
 
+        include pug/modules/carousel.pug
         include pug/modules/request.pug
         include pug/modules/footer.pug
 

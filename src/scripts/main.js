@@ -1,3 +1,44 @@
+// Atttach files
+window.onload = () => {
+    const uploadFile = document.getElementById("form__upload-file");
+    const uploadBtn = document.getElementById("form__upload-btn");
+    const uploadText = document.getElementById("form__upload-text");
+
+    // Иммитируем нажатие по нашей скрытой кнопке закгрузке файлов
+    uploadBtn.addEventListener("click", function () {
+        uploadFile.click();
+    });
+    // Добавляем событие загрузки файла
+    uploadFile.addEventListener("change", function () {
+        if (uploadFile.value) {
+            uploadText.innerText = uploadFile.value.match(/[\/\\]([\w\d\s\.\-(\)]+)$/)[1];
+        } else {
+            uploadText.innerText = "Файл не выбран";
+        }
+    });
+}
+// form placeholder
+const formItems = document.querySelectorAll('.form-item__field');
+
+for (let item of formItems) {
+    const thisParent = item.closest('.form-item');
+    const thisPlaceholder = thisParent.querySelector('.form-item__placeholder');
+    // Если инпут в фокусе
+    item.addEventListener('focus', function () {
+        thisPlaceholder.classList.add('active');
+    });
+
+    // Если инпут теряет фокус
+    item.addEventListener('blur', function () {
+        if (item.value.length > 0) {
+            thisPlaceholder.classList.add('active');
+        } else {
+            thisPlaceholder.classList.remove('active');
+        }
+    })
+}
+
+
 // Accordion index
 const accordionTitles = document.querySelectorAll('.accordion__title');
 const tabIndicator = document.querySelector("#tab__indicator");
@@ -43,57 +84,18 @@ function activeTabContent(tabName) {
         }
     })
 }
-
-// Slider
-// Устанавливаем индекс слайда по умолчанию 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Увеличиваем индекс на 1 — показываем следующий слайд
-function nextSlide() {
-    showSlides(slideIndex += 1);
-}
-
-// Уменьшает индекс на 1 — показываем предыдущий слайд
-function previousSlide() {
-    showSlides(slideIndex -= 1);
-}
-
-// Устанавливаем текущий слайд 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-// Функция перелистывания 
-function showSlides(n) {
-    let slides = document.getElementsByClassName("slider__item");
-
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-
-    // Проходим по каждому слайду в цикле for 
-    for (let slide of slides) {
-        slide.style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-};
-
 // Carousel
 const carousel = function () {
-    const slides = document.querySelectorAll('.carousel__item');
+    const carousel = document.querySelectorAll('.carousel__item');
     const btnLeft = document.querySelector('.carousel__btn--left');
     const btnRight = document.querySelector('.carousel__btn--right');
 
     let curSlide = 0;
-    const maxSlide = slides.length;
+    const maxSlide = carousel.length;
 
-    const goToSlide = function (slide) {
-        slides.forEach(
-            (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    const goToSlide = function (slideItem) {
+        carousel.forEach(
+            (s, i) => (s.style.transform = `translateX(${100 * (i - slideItem)}%)`)
         );
     };
 
@@ -132,3 +134,42 @@ const carousel = function () {
     });
 };
 carousel();
+
+
+// Slider
+// Устанавливаем индекс слайда по умолчанию 
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Увеличиваем индекс на 1 — показываем следующий слайд
+function nextSlide() {
+    showSlides(slideIndex += 1);
+}
+
+// Уменьшает индекс на 1 — показываем предыдущий слайд
+function previousSlide() {
+    showSlides(slideIndex -= 1);
+}
+
+// Устанавливаем текущий слайд 
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// Функция перелистывания 
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slider__item");
+
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+
+    // Проходим по каждому слайду в цикле for 
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+};

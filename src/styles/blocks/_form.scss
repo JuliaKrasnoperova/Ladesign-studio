@@ -1,0 +1,154 @@
+.form {
+    width: 513px;
+    font-family: 'Roboto';
+    margin-bottom: 44px;
+
+}
+
+.form .form-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.form-item {
+    position: relative;
+    margin-bottom: 40px;
+
+}
+
+
+
+.form-item textarea {
+    outline: none;
+    padding-top: 15px;
+}
+
+
+
+.form-item__placeholder {
+    position: absolute;
+    bottom: 3px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ADADAD;
+
+    pointer-events: none;
+    transition: 0.2s;
+
+}
+
+.form-item__placeholder.active {
+    position: absolute;
+    top: -5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.15;
+    color: #ADADAD;
+    margin-bottom: 10px;
+
+
+}
+
+.form-item__input {
+    padding-top: 15px;
+
+}
+
+
+.form-item__field {
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777777;
+
+}
+
+.form-item__field {
+    border-bottom: 1px solid #3D3D3D;
+}
+
+.form-item__field:focus {
+    border-bottom: 2px solid #393246;
+}
+
+.form-item__textarea {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #9D9D9D;
+    padding-top: 15px;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+#form__upload-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777777;
+    background: transparent;
+}
+
+#form__upload-btn::before {
+    content: "";
+    background-image: url(../img/form/attach.svg);
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form__upload-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #777777;
+}
+
+.form__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.form__info {
+    display: flex;
+    width: 500px;
+    gap: 30px;
+}
+
+.form__info p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #878787;
+}
+
+.form__info a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration-line: underline;
+    color: #393246;
+}
