@@ -89,7 +89,7 @@
     margin-top: 30px;
 }
 
-#form__upload-btn {
+.form__upload {
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -102,7 +102,7 @@
     background: transparent;
 }
 
-#form__upload-btn::before {
+.form__upload::before {
     content: "";
     background-image: url(../img/form/attach.svg);
     display: block;

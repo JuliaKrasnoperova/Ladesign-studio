@@ -31,22 +31,24 @@ html(lang="en")
                             span 1 месяц
                     .description__text 
                         p В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями. В интерьере использовано довольно много различных материалов и текстур. Однако благодаря тому, что каждый материал применяется не единожды и находит себе продолжение в других помещениях, квартира смотрится цельным объёмом, где все текстуры дополняют друг друга и сочетаются между собой.
-        section.container.slider
-            .slider__item
-                img(src="./img/slider/1.png" alt="image")
-            .slider__item
-                img(src="./img/slider/2.png" alt="image")
-            .slider__item
-                img(src="./img/slider/loft-1.png" alt="image")
-            .slider__item
-                img(src="./img/slider/loft-2.png" alt="image")
-            .slider__item
-                img(src="./img/slider/loft-3.png" alt="image")
-
-            button.slider__left(type="button" onclick="previousSlide()")
+        section.container.slider#slider 
+            .slider__wrapper 
+                #slides.slider__slides  
+                    .slider__item
+                        img(src="./img/slider/1.png" alt="loft")
+                    .slider__item
+                        img(src="./img/slider/2.png" alt="loft")
+                    .slider__item
+                        img(src="./img/slider/loft-1.png" alt="loft")
+                    .slider__item
+                        img(src="./img/slider/loft-2.png" alt="loft")
+                    .slider__item
+                        img(src="./img/slider/loft-3.png" alt="loft")
+            div#prev.control.slider__prev
                 img(src="./img/slider/arrow-left.svg" alt="left")
-            button.slider__rigth(type="button" onclick="nextSlide()")
+            div#next.control.slider__next
                 img(src="./img/slider/arrow-right.svg" alt="right")
+
         section.info 
             .container 
                 h3.info__title.title-h3 практичность и рациональное использование<br>каждого квадратного метра
@@ -83,6 +85,22 @@ html(lang="en")
         include pug/modules/carousel.pug
         include pug/modules/request.pug
         include pug/modules/footer.pug
+        .popup__bg#popup__bg
+            .popup
+                img.popup__close(src="./img/pop-up/close.svg" alt="close")
+                h3.title-h3.popup__title оставЬТЕ СВОИ КОНТАКТЫ. мЫ СВЯЖЕМСЯ С ВАМИ И ОБСУДИМ ВАШ ПРОЕКТ
+                form.popup__form(action="#") 
+                    .form-item.popup__form-item 
+                        span.form-item__placeholder Ваше имя
+                        input.form-item__input.form-item__field(type="text")
+                    .form-item.popup__form-item  
+                        span.form-item__placeholder Ваш email
+                        input.form-item__input.form-item__field(type="email")
+                .form__info 
+                    button.button(type="submit") Отправить
+                    p   Нажимая на кнопку, я даю 
+                        a(href="#") согласие 
+                        a(href="#") на обработку персональных данных
 
 
         script(src="./js/main.min.js")

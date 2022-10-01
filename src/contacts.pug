@@ -1,52 +1,50 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-        // styles
-        link(rel="stylesheet" href="./css/style.min.css")
-        title Контакты
-    body 
-        include pug/modules/navigation.pug
-        section.contacts 
-            h2.title.contacts__title Контакты
-            .contacts__wrapper 
-                .contacts__left
-                    h3.title-h3 Напишите нам
-                    p Мы всегда рады ответить на интересующие  вас вопросы.<br>Заполните форму и наш специалист свяжется с вами.
-                    form.form(action="#") 
-                        .form-item 
-                            span.form-item__placeholder Ваше имя
-                            input.form-item__input.form-item__field(type="text")
-                        .form-item 
-                            span.form-item__placeholder Ваш email
-                            input.form-item__input.form-item__field(type="email")
-                        .form-item 
-                            span.form-item__placeholder Ваш вопрос
-                            textarea.form-item__input.form-item__field(name="" cols="5" rows="1")
-                    input#form__upload-file(type="file" hidden="hidden")
-                    .form__wrapper
-                        button#form__upload-btn Прикрепить файл
-                        span#form__upload-text Файл не выбран
-                    .form__info 
-                        button.button(type="submit") Отправить
-                        p   Нажимая на кнопку, я даю 
-                            a(href="#") согласие 
-                            a(href="#") на обработку персональных данных
-
-
-                .contacts__right
-                    h3.title-h3 Наши контакты
-                    ul.contacts__list 
-                        li
-                            a(href="tel:+79184123443") +7 918 412-34-43
-                        li
-                            a.contacts__email(href="mailto:ladesign@inbox.ru") ladesign@inbox.ru
-                        li  Пн - Сб 9:00 — 18:00
-                        li  г. Краснодар,ул. Братьев Игнатовых, 1/1
-        include pug/modules/footer.pug
+    // styles
+    link(rel="stylesheet" href="./css/style.min.css")
+    title Контакты
+  body 
+    include pug/modules/navigation.pug
+    section.contacts 
+      h2.title.contacts__title Контакты
+      .contacts__wrapper 
+        .contacts__left
+          h3.title-h3 Напишите нам
+          p Мы всегда рады ответить на интересующие  вас вопросы.<br>Заполните форму и наш специалист свяжется с вами.
+          form.form(action="#") 
+            .form-item 
+              span.form-item__placeholder Ваше имя
+              input.form-item__input.form-item__field(type="text")
+            .form-item 
+              span.form-item__placeholder Ваш email
+              input.form-item__input.form-item__field(type="email")
+            .form-item 
+              span.form-item__placeholder Ваш вопрос
+              textarea.form-item__input.form-item__field(name="" cols="5" rows="1")
+          input#form__upload-file(type="file" hidden="hidden")
+          .form__wrapper
+            button.form__upload#form__upload-btn Прикрепить файл
+            span#form__upload-text Файл не выбран
+          .form__info 
+            button.button(type="submit") Отправить
+            p   Нажимая на кнопку, я даю 
+              a(href="#") согласие 
+              a(href="#") на обработку персональных данных
+        .contacts__right
+          h3.title-h3 Наши контакты
+          ul.contacts__list 
+            li
+              a(href="tel:+79184123443") +7 918 412-34-43
+            li
+              a.contacts__email(href="mailto:ladesign@inbox.ru") ladesign@inbox.ru
+            li  Пн - Сб 9:00 — 18:00
+            li  г. Краснодар,ул. Братьев Игнатовых, 1/1
+    include pug/modules/footer.pug
 
 
 
@@ -55,4 +53,4 @@ html(lang="en")
 
 
 
-        script(src="./js/main.min.js")
+    script(src="./js/main.min.js")

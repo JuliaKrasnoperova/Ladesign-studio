@@ -1,22 +1,38 @@
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-        // styles
-        link(rel="stylesheet" href="./css/style.min.css")
-        title Портфолио
-    body 
-        include pug/modules/navigation.pug
-        include pug/modules/portfolio.pug
-        include pug/modules/request.pug
-        include pug/modules/footer.pug
+    // styles
+    link(rel="stylesheet" href="./css/style.min.css")
+    title Портфолио
+  body 
+    include pug/modules/navigation.pug
+    include pug/modules/portfolio.pug
+    include pug/modules/request.pug
+    include pug/modules/footer.pug
+    .popup__bg#popup__bg
+      .popup
+        img.popup__close(src="./img/pop-up/close.svg" alt="close")
+        h3.title-h3.popup__title оставЬТЕ СВОИ КОНТАКТЫ. мЫ СВЯЖЕМСЯ С ВАМИ И ОБСУДИМ ВАШ ПРОЕКТ
+        form.popup__form(action="#") 
+          .form-item.popup__form-item 
+            span.form-item__placeholder Ваше имя
+            input.form-item__input.form-item__field(type="text")
+          .form-item.popup__form-item  
+            span.form-item__placeholder Ваш email
+            input.form-item__input.form-item__field(type="email")
+        .form__info 
+          button.button(type="submit") Отправить
+          p   Нажимая на кнопку, я даю 
+            a(href="#") согласие 
+            a(href="#") на обработку персональных данных
 
 
 
-        script(src="./js/main.min.js")
+    script(src="./js/main.min.js")
 
 
 

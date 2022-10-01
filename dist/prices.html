@@ -164,12 +164,12 @@
         <div class="carousel__item"> 
           <div class="projects__item"><img src="./img/projects/04.png" alt="image"></div>
         </div>
-        <button class="carousel__btn carousel__btn--left"><img src="./img/slider/arrow-left.svg" alt="arrow"></button>
-        <button class="carousel__btn--right"><img src="./img/slider/arrow-right.svg" alt="arrow"></button>
+        <button class="carousel__btn carousel__btn--left" id="nextSlide"><img src="./img/slider/arrow-left.svg" alt="arrow"></button>
+        <button class="carousel__btn--right" id="prevSlide"><img src="./img/slider/arrow-right.svg" alt="arrow"></button>
       </div>
     </div>
     <section class="request">
-      <div class="container"> <a class="request__link" href="#">
+      <div class="container"> <a class="request__link" id="popup__open" href="#">
           <h3>оставить заявку на проект</h3></a></div>
     </section>
     <footer class="footer"> 
@@ -178,6 +178,23 @@
         <div class="footer__copy">© 2022 LA Design, all rights reserved.</div>
       </div>
     </footer>
+    <div class="popup__bg" id="popup__bg">
+      <div class="popup"><img class="popup__close" src="./img/pop-up/close.svg" alt="close">
+        <h3 class="title-h3 popup__title">оставЬТЕ СВОИ КОНТАКТЫ. мЫ СВЯЖЕМСЯ С ВАМИ И ОБСУДИМ ВАШ ПРОЕКТ</h3>
+        <form class="popup__form" action="#"> 
+          <div class="form-item popup__form-item"> <span class="form-item__placeholder">Ваше имя</span>
+            <input class="form-item__input form-item__field" type="text">
+          </div>
+          <div class="form-item popup__form-item"> <span class="form-item__placeholder">Ваш email</span>
+            <input class="form-item__input form-item__field" type="email">
+          </div>
+        </form>
+        <div class="form__info"> 
+          <button class="button" type="submit">Отправить</button>
+          <p>  Нажимая на кнопку, я даю <a href="#">согласие </a><a href="#">на обработку персональных данных</a></p>
+        </div>
+      </div>
+    </div>
     <script src="./js/main.min.js"></script>
   </body>
 </html>
