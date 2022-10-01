@@ -103,47 +103,38 @@
     <div class="projects container"> 
       <h3 class="title-h3 projects__title">похожие проекты</h3>
     </div>
-    <div class="carousel">
-      <div class="carousel__box">
-        <div class="carousel__item"> 
+    <div class="carousel__wrapper"> 
+      <ul class="carousel" data-target="carousel">
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/01.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
+        </li>
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/02.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
+        </li>
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/03.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
+        </li>
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/04.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
+        </li>
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/01.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
+        </li>
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/02.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
+        </li>
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/03.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
+        </li>
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/04.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
+        </li>
+        <li class="carousel__card" data-target="card">
           <div class="projects__item"><img src="./img/projects/01.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
-          <div class="projects__item"><img src="./img/projects/02.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
-          <div class="projects__item"><img src="./img/projects/03.png" alt="image"></div>
-        </div>
-        <div class="carousel__item"> 
-          <div class="projects__item"><img src="./img/projects/04.png" alt="image"></div>
-        </div>
-        <button class="carousel__btn carousel__btn--left" id="nextSlide"><img src="./img/slider/arrow-left.svg" alt="arrow"></button>
-        <button class="carousel__btn--right" id="prevSlide"><img src="./img/slider/arrow-right.svg" alt="arrow"></button>
-      </div>
+        </li>
+      </ul>
+      <button class="carousel__btn--left" data-action="carouselLeft"><img src="./img/slider/arrow-left.svg" alt="left"></button>
+      <button class="carousel__btn--right" data-action="carouselRight"><img src="./img/slider/arrow-right.svg" alt="right"></button>
     </div>
     <section class="request">
       <div class="container"> <a class="request__link" id="popup__open" href="#">

@@ -1,42 +1,33 @@
-.carousel
-    .carousel__box
-        .carousel__item 
+.carousel__wrapper 
+    ul.carousel(data-target="carousel")
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/01.png" alt="image")
-        .carousel__item 
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/02.png" alt="image")
-        .carousel__item 
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/03.png" alt="image")
-        .carousel__item 
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/04.png" alt="image")
-        .carousel__item 
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/01.png" alt="image")
-        .carousel__item 
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/02.png" alt="image")
-        .carousel__item 
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/03.png" alt="image")
-        .carousel__item 
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/04.png" alt="image")
-        .carousel__item 
+        li.carousel__card(data-target="card")
             .projects__item
                 img(src="./img/projects/01.png" alt="image")
-        .carousel__item 
-            .projects__item
-                img(src="./img/projects/02.png" alt="image")
-        .carousel__item 
-            .projects__item
-                img(src="./img/projects/03.png" alt="image")
-        .carousel__item 
-            .projects__item
-                img(src="./img/projects/04.png" alt="image")
-        button.carousel__btn.carousel__btn--left#nextSlide
-            img(src="./img/slider/arrow-left.svg" alt="arrow")
-        button.carousel__btn--right#prevSlide
-            img(src="./img/slider/arrow-right.svg" alt="arrow")
+    button.carousel__btn--left(data-action ="carouselLeft")
+        img(src="./img/slider/arrow-left.svg" alt="left")
+    button.carousel__btn--right(data-action ="carouselRight")
+        img(src="./img/slider/arrow-right.svg" alt="right")
