@@ -77,3 +77,8 @@
     backdrop-filter: blur(2.5px);
     border-radius: 50%;
 }
+
+.carousel__btn--left:active,
+.carousel__btn--right:active {
+    transform: scale(.8);
+}
