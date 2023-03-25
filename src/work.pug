@@ -31,23 +31,30 @@ html(lang="en")
                             span 1 месяц
                     .description__text 
                         p В этой квартире для молодого человека много бетона, кирпича и натурального дерева. Это лофт в классическом понимании и с очень интересными деталями. В интерьере использовано довольно много различных материалов и текстур. Однако благодаря тому, что каждый материал применяется не единожды и находит себе продолжение в других помещениях, квартира смотрится цельным объёмом, где все текстуры дополняют друг друга и сочетаются между собой.
-        section.container.slider#slider 
-            .slider__wrapper 
-                #slides.slider__slides  
-                    .slider__item
-                        img(src="./img/slider/1.png" alt="loft")
-                    .slider__item
-                        img(src="./img/slider/2.png" alt="loft")
-                    .slider__item
-                        img(src="./img/slider/loft-1.png" alt="loft")
-                    .slider__item
-                        img(src="./img/slider/loft-2.png" alt="loft")
-                    .slider__item
-                        img(src="./img/slider/loft-3.png" alt="loft")
-            div#prev.control.slider__prev
-                img(src="./img/slider/arrow-left.svg" alt="left")
-            div#next.control.slider__next
-                img(src="./img/slider/arrow-right.svg" alt="right")
+        section.container.slider 
+            .slider__wrapper
+                .slider__line 
+                    .slider__item 
+                        img(src="./img/slider/01.png" alt="loft")
+                    .slider__item 
+                        img(src="./img/slider/02.png" alt="loft")
+                    .slider__item 
+                        img(src="./img/slider/03.png" alt="loft")
+                    .slider__item 
+                        img(src="./img/slider/04.png" alt="loft")
+                    .slider__item 
+                        img(src="./img/slider/05.png" alt="loft")
+                button.slider__arrow.slider__arrow-prev 
+                    img(src="./img/slider/arrow-left.svg" alt="button")
+                button.slider__arrow.slider__arrow-next 
+                    img(src="./img/slider/arrow-right.svg" alt="button")
+                .slider__pagination 
+                    .slider__dot.slider__dot-active
+                    .slider__dot
+                    .slider__dot
+                    .slider__dot
+                    .slider__dot
+
 
         section.info 
             .container 

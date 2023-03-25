@@ -135,39 +135,23 @@
     <div class="projects container"> 
       <h3 class="title-h3 projects__title">похожие проекты</h3>
     </div>
-    <div class="carousel__wrapper"> 
-      <ul class="carousel" data-target="carousel">
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/01.png" alt="image"></div>
-        </li>
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/02.png" alt="image"></div>
-        </li>
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/03.png" alt="image"></div>
-        </li>
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/04.png" alt="image"></div>
-        </li>
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/01.png" alt="image"></div>
-        </li>
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/02.png" alt="image"></div>
-        </li>
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/03.png" alt="image"></div>
-        </li>
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/04.png" alt="image"></div>
-        </li>
-        <li class="carousel__card" data-target="card">
-          <div class="projects__item"><img src="./img/projects/01.png" alt="image"></div>
-        </li>
-      </ul>
-      <button class="carousel__btn--left" data-action="carouselLeft"><img src="./img/slider/arrow-left.svg" alt="left"></button>
-      <button class="carousel__btn--right" data-action="carouselRight"><img src="./img/slider/arrow-right.svg" alt="right"></button>
-    </div>
+    <section class="carousel"> 
+      <div class="carousel__wrapper"> 
+        <div class="carousel__line">    
+          <div class="carousel__item"> <img src="/img/carousel/01.png" alt="loft"><img src="/img/carousel/02.png" alt="loft"><img src="/img/carousel/03.png" alt="loft"></div>
+          <div class="carousel__item"> <img src="/img/carousel/01.png" alt="loft"><img src="/img/carousel/02.png" alt="loft"><img src="/img/carousel/03.png" alt="loft"></div>
+          <div class="carousel__item"> <img src="/img/carousel/01.png" alt="loft"><img src="/img/carousel/02.png" alt="loft"><img src="/img/carousel/03.png" alt="loft"></div>
+        </div>
+        <button class="carousel__arrow carousel__arrow-prev"> <img src="/img/carousel/arrow-left.svg" alt="button"></button>
+        <button class="carousel__arrow carousel__arrow-next"> <img src="/img/carousel/arrow-right.svg" alt="button"></button>
+        <div class="carousel__pagination"> 
+          <div class="carousel__dot carousel__dot-active"> </div>
+          <div class="carousel__dot"> </div>
+          <div class="carousel__dot"></div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/main.min.js"></script>
     <section class="request">
       <div class="container"> <a class="request__link" id="popup__open" href="#">
           <h3>оставить заявку на проект</h3></a></div>
