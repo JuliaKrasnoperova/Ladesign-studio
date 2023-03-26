@@ -1,3 +1,4 @@
+
 // form placeholder
 const formItems = document.querySelectorAll(".form-item__field");
 
@@ -24,6 +25,7 @@ window.onload = () => {
   const uploadBtn = document.getElementById("form__upload-btn");
   const uploadText = document.getElementById("form__upload-text");
 
+
   // Иммитируем нажатие по нашей скрытой кнопке закгрузке файлов
   if (uploadBtn) {
     uploadBtn.addEventListener("click", function () {
@@ -42,6 +44,10 @@ window.onload = () => {
       }
     });
   }
+
+    // Preloader
+    let preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
 };
 
 // pop-up
