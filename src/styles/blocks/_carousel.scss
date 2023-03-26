@@ -15,13 +15,14 @@
   gap: 20px;
   justify-content: center;
 }
-.carousel__line img {
-  width: 100%;
+.carousel__item img {
+  width: 270px;
+  height: auto;
 }
 
 .carousel__arrow {
   position: absolute;
-  top: 45%;
+  top: 40%;
   width: auto;
   height: auto;
   padding: 16px 10px;
