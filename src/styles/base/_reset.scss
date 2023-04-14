@@ -1,4 +1,6 @@
 /* Reset and base styles  */
+@import "./_index";
+
 * {
   padding: 0px;
   margin: 0px;
@@ -21,6 +23,18 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+
+  @include laptop {
+    max-width: 930px;
+  }
+
+  @include tablet {
+    max-width: 678px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
 }
 
 /* Links */

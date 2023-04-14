@@ -1,54 +1,78 @@
 .header {
-    height: 800px;
-    position: relative;
-    background-image: url(./../img/header/header-bg.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 75px;
+  height: 800px;
+  position: relative;
+  background-image: url(./../img/header/header-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include laptop {
+    background-image: url(./../img/header/header-bg-1024.png);
+    height: 600px;
+  }
+
+  @include mobile {
+    background-image: url(./../img/header/header-bg-320.png);
+    height: 480px;
+  }
 }
 
-
 .header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .header__wrapper {
-    border-bottom: 0.5px solid #878787;
-    position: relative;
+  border-bottom: 0.5px solid #878787;
+  position: relative;
 }
 
 .header__content {
-    text-align: center;
-    position: relative;
-    padding-top: 160px;
+  text-align: center;
+  position: relative;
+  padding-top: 160px;
 
+  @include tablet {
+    padding-top: 81px;
+  }
+
+  @include mobile {
+    padding-top: 94px;
+  }
 }
 
 .header__title {
-    font-weight: 300;
-    font-size: 140px;
-    line-height: 1.17;
-    text-transform: uppercase;
-    color: #fff;
+  font-weight: 300;
+  font-size: 140px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #fff;
+  @include tablet {
+    font-size: 120px;
+  }
+  @include mobile {
+    font-size: 60px;
+  }
 }
 
 .header__description {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.35;
-    color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.35;
+  color: #fff;
+  @include mobile {
+    font-size: 17px;
+  }
 }
 
 .header__scroll {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    padding-bottom: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding-bottom: 50px;
 }

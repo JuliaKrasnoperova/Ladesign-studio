@@ -1,9 +1,15 @@
 .portfolio {
-    text-align: center;
-    padding-top: 100px;
+  text-align: center;
+  padding-top: 100px;
+  @include laptop-940 {
+    padding-top: 70px;
+  }
+  @include mobile {
+    padding-top: 66px;
+  }
 }
 
 .portfolio__title {
-    text-align: center;
-    margin-bottom: 56px;
+  text-align: center;
+  margin-bottom: 56px;
 }

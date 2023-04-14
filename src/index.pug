@@ -42,7 +42,11 @@ html(lang="en")
                             .accordion__text
                                 p Обеспечиваем защиту персональных данных заказчиков и не раскрываем их третьим лицам.
                     .about__image
-                        img(src="./img/about/about-image.png" alt="image")
+                        picture 
+                            source(srcset="./img/about/about-image-mobile.png" media='(max-width:540px)' alt="image")
+                            source(srcset="./img/about/about-image-tablet.png" media='(max-width:940px)' alt="image")
+                            source(srcset="./img/about/about-image-1024.png" media='(max-width:1024px)' alt="image")
+                            img.about__image-img(src="./img/about/about-image.png" alt="image")
         include pug/modules/portfolio.pug
         include pug/modules/request.pug
         include pug/modules/footer.pug

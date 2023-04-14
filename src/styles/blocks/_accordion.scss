@@ -1,61 +1,64 @@
 .accordion {
-    max-width: 520px;
+  max-width: 520px;
+  @include laptop-940 {
+    min-width: 100%;
+  }
 }
 
 .accordion__title {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .accordion__header {
-    padding-top: 27px;
-    padding-bottom: 27px;
-    border-top: 1px solid #D5D5D5;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.35;
-    text-transform: uppercase;
-    color: #3D3D3D;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  border-top: 1px solid #d5d5d5;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: #3d3d3d;
 }
 
 .accordion__title::after {
-    content: "";
-    background-image: url(../img/about/arrow.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 31px;
-    height: 30px;
-    transition: 0.2s ease-in-out;
+  content: "";
+  background-image: url(../img/about/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 31px;
+  height: 30px;
+  transition: 0.2s ease-in-out;
 }
 
 .accordion__text p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #777777;
-    margin-bottom: 27px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777777;
+  margin-bottom: 27px;
 }
 
 .accordion__item:last-child {
-    border-bottom: 1px solid #D5D5D5;
+  border-bottom: 1px solid #d5d5d5;
 }
 
 .accordion__title-active::after {
-    content: "";
-    background-image: url(../img/about/arrow.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 31px;
-    height: 30px;
-    transform: rotate(-92deg);
-    transition: 0.2s ease-in-out;
+  content: "";
+  background-image: url(../img/about/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 31px;
+  height: 30px;
+  transform: rotate(-92deg);
+  transition: 0.2s ease-in-out;
 }
 
 .accordion__text {
-    max-height: 0;
-    overflow: hidden;
-    transition: 1000ms ease max-height;
+  max-height: 0;
+  overflow: hidden;
+  transition: 1000ms ease max-height;
 }
