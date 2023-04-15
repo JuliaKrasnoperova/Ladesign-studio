@@ -21,6 +21,9 @@
   line-height: 1.35;
   text-transform: uppercase;
   color: #3d3d3d;
+  @include mobile {
+    font-size: 15px;
+  }
 }
 
 .accordion__title::after {

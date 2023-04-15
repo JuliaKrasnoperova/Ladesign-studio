@@ -12,46 +12,196 @@
     "tabs__elem-1 tabs__elem-3 tabs__elem-9 tabs__elem-9"
     "tabs__elem-4 tabs__elem-4 tabs__elem-9 tabs__elem-9"
     "tabs__elem-5 tabs__elem-6 tabs__elem-10 tabs__elem-10";
+
+  @include tablet {
+    grid-template-columns: minmax(20px, 320px) minmax(20px, 320px);
+    grid-template-rows:
+      minmax(20px, 320px) minmax(20px, 320px) minmax(20px, 320px)
+      minmax(20px, 320px) minmax(20px, 660px) minmax(20px, 320px) minmax(20px, 320px);
+    gap: 30px 30px;
+    grid-template-areas:
+      "tabs__elem-1 tabs__elem-2"
+      "tabs__elem-1 tabs__elem-3"
+      "tabs__elem-4 tabs__elem-5"
+      "tabs__elem-6 tabs__elem-6"
+      "tabs__elem-7 tabs__elem-7"
+      "tabs__elem-8 tabs__elem-9"
+      "tabs__elem-10 tabs__elem-10";
+  }
+
+  @include mobile-550 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
 }
 
 .tabs__elem-1 {
   grid-area: tabs__elem-1;
 }
 
+.tabs__elem-1 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 433px;
+  }
+  @include tablet {
+    height: 670px;
+  }
+  @include mobile-550 {
+    width: 290px;
+    height: 470px;
+  }
+}
+
 .tabs__elem-2 {
   grid-area: tabs__elem-2;
 }
-
+.tabs__elem-2 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 200px;
+  }
+  @include tablet {
+    height: 320px;
+  }
+  @include mobile-550 {
+    width: 100%;
+    height: 290px;
+  }
+}
 .tabs__elem-3 {
   grid-area: tabs__elem-3;
+}
+.tabs__elem-3 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 200px;
+  }
+  @include tablet {
+    height: 320px;
+  }
+  @include mobile-550 {
+    width: 100%;
+    height: 290px;
+  }
 }
 
 .tabs__elem-4 {
   grid-area: tabs__elem-4;
 }
 
+.tabs__elem-4 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 200px;
+  }
+  @include tablet {
+    height: 320px;
+  }
+  @include mobile-550 {
+    width: 100%;
+    height: 290px;
+  }
+}
 .tabs__elem-5 {
   grid-area: tabs__elem-5;
+}
+.tabs__elem-5 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 200px;
+  }
+  @include tablet {
+    height: 320px;
+  }
+  @include mobile-550 {
+    width: 100%;
+    height: 290px;
+  }
 }
 
 .tabs__elem-6 {
   grid-area: tabs__elem-6;
 }
+.tabs__elem-6 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 200px;
+  }
+  @include tablet {
+    height: 320px;
+  }
+  @include mobile-550 {
+    max-width: 290px;
+    width: 100%;
+    height: 220px;
+  }
+}
 
 .tabs__elem-7 {
   grid-area: tabs__elem-7;
 }
+.tabs__elem-7 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 200px;
+  }
+  @include tablet {
+    height: 660px;
+  }
+  @include mobile-550 {
+    width: 100%;
+    height: 290px;
+  }
+}
 
 .tabs__elem-8 {
   grid-area: tabs__elem-8;
+  @include mobile-550 {
+    display: none;
+  }
+}
+.tabs__elem-8 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 200px;
+  }
+  @include tablet {
+    height: 320px;
+  }
 }
 
 .tabs__elem-9 {
   grid-area: tabs__elem-9;
+  @include mobile-550 {
+    display: none;
+  }
+}
+.tabs__elem-9 > .tabs__content-link img {
+  object-fit: cover;
+  @include laptop {
+    height: 433px;
+  }
+  @include tablet {
+    height: 320px;
+  }
 }
 
 .tabs__elem-10 {
   grid-area: tabs__elem-10;
+  @include mobile-550 {
+    display: none;
+  }
+}
+.tabs__elem-10 > .tabs__content-link img {
+  @include laptop {
+    height: 200px;
+  }
+  @include tablet {
+    height: 320px;
+  }
 }
 
 .tabs__nav {
@@ -61,6 +211,12 @@
   max-width: 662px;
   margin: 0 auto;
   margin-bottom: 40px;
+
+  @include mobile {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 }
 
 .tabs__nav-item {
