@@ -1,125 +1,126 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-    // styles
-    link(rel="stylesheet" href="./css/style.min.css")
-    include pug/modules/favicons.pug
-    title Услуги и цены
-  body
-    include pug/modules/preloader.pug
-    include pug/modules/navigation.pug
-    section.services 
-      .container 
-        h2.services__title.title услуги и цены
-        .services__wrapper 
-          .services__header Зачем вам нужен<br>дизайн-проект
-          .services__text 
-            .services__item 
-              h4 Чтобы ничего не упустить
-              p Качественный дизайн-проект поможет избежать ошибок и переделок, которые приводят к лишним тратам и затягивают сроки ремонта
-            .services__item 
-              h4 Получить нужный результат
-              p С помощью профессионалов вы сможете донести до строителей свое видение будущего дизайна интерьера
-            .services__item 
-              h4 Создать комфорт
-              p Грамотная планировка и продуманная расстановка мебели сделает пространство эргономичным и функциональным
-            .services__item 
-              h4 Сэкономить деньги
-              p Дизайнер подберет и рассчитает нужное количество материалов с учетом площади помещения, что поможет избежать перерасхода
-            .services__item 
-              h4 Потратить время на что-то более приятное
-              p Вам не придется ездить по магазинам, месяцами подбирать и продумывать подходящие дизайнерские решения в интернете. Не нужно постоянно ездить на объект и созваниваться с рабочими, пытаться самостоятельно узаконить новые планировочные решения. Студия дизайна интерьера LА Design сделает все это за вас!
-    section.prices 
-      .container 
-        .prices__title.title СТОИМОСТЬ РАЗРАБОТКИ ДИЗАЙН-ПРОЕКТА
-        .prices__wrapper 
-          .prices__item
-            div.prices__container
-              div
-                .prices__header basic
-                p от 2500 ₽
-                span.accordion__title.prices__btn Показать больше
-              .prices__text
-                ul.prices__list 
-                  li Обмерочный план
-                  li План расстановки мебели
-                  li План демонтажный
-                  li План монтажный
-                  li План полов с материалами
-                  li -
-                  li -
-                  li -
-                  li -
-            button.prices__button(type="button") Заказать
-          .prices__item.prices__item-pro
-            .prices__item-pro-note recommend
-            div.prices__container
-              div
-                .prices__header PRO
-                p от 3500 ₽
-                span.accordion__title.prices__btn Показать больше
-              .prices__text
-                ul.prices__list 
-                  li Обмерочный план
-                  li План расстановки мебели
-                  li План демонтажный
-                  li План монтажный
-                  li План полов с материалами
-                  li План экспликации
-                  li -
-                  li -
-                  li -
-            button.prices__button.prices__button-pro(type="button") Заказать
-          .prices__item
-            div.prices__container
-              div
-                .prices__header exclusive
-                p от 5000 ₽
-                span.accordion__title.prices__btn Показать больше
-              .prices__text
-                ul.prices__list 
-                  li Обмерочный план
-                  li План расстановки мебели
-                  li План демонтажный
-                  li План монтажный
-                  li План полов с материалами
-                  li -
-                  li План экспликации
-                  li Чертежи сложных элементов и мебели (если заказывать отдельно - расчет индивидуальный)
-                  li Спецификация осветительного оборудования
-            button.prices__button(type="button") Заказать
-    .projects.container 
-      h3.title-h3.projects__title похожие проекты
+        // styles
+        link(rel="stylesheet" href="./css/style.min.css")
+        include pug/modules/favicons.pug
+        title Услуги и цены
+    body
+        include pug/modules/preloader.pug
+        include pug/modules/navigation.pug
+        section.services 
+            .container 
+                h2.services__title.title услуги и цены
+                .services__wrapper 
+                    .services__header Зачем вам нужен<br>дизайн-проект
+                    .services__header.services__header-tablet Зачем вам нужен дизайн-проект
+                    .services__text 
+                        .services__item 
+                            h4 Чтобы ничего не упустить
+                            p Качественный дизайн-проект поможет избежать ошибок и переделок, которые приводят к лишним тратам и затягивают сроки ремонта
+                        .services__item 
+                            h4 Получить нужный результат
+                            p С помощью профессионалов вы сможете донести до строителей свое видение будущего дизайна интерьера
+                        .services__item 
+                            h4 Создать комфорт
+                            p Грамотная планировка и продуманная расстановка мебели сделает пространство эргономичным и функциональным
+                        .services__item 
+                            h4 Сэкономить деньги
+                            p Дизайнер подберет и рассчитает нужное количество материалов с учетом площади помещения, что поможет избежать перерасхода
+                        .services__item 
+                            h4 Потратить время на что-то более приятное
+                            p Вам не придется ездить по магазинам, месяцами подбирать и продумывать подходящие дизайнерские решения в интернете. Не нужно постоянно ездить на объект и созваниваться с рабочими, пытаться самостоятельно узаконить новые планировочные решения. Студия дизайна интерьера LА Design сделает все это за вас!
+        section.prices 
+            .container 
+                .prices__title.title СТОИМОСТЬ РАЗРАБОТКИ ДИЗАЙН-ПРОЕКТА
+                .prices__wrapper 
+                    .prices__item
+                        div.prices__container
+                            div
+                                .prices__header basic
+                                p от 2500 ₽
+                                span.accordion__title.prices__btn Показать больше
+                            .prices__text
+                                ul.prices__list 
+                                    li Обмерочный план
+                                    li План расстановки мебели
+                                    li План демонтажный
+                                    li План монтажный
+                                    li План полов с материалами
+                                    li -
+                                    li -
+                                    li -
+                                    li -
+                        button.prices__button(type="button") Заказать
+                    .prices__item.prices__item-pro
+                        .prices__item-pro-note recommend
+                        div.prices__container
+                            div
+                                .prices__header PRO
+                                p от 3500 ₽
+                                span.accordion__title.prices__btn Показать больше
+                            .prices__text
+                                ul.prices__list 
+                                    li Обмерочный план
+                                    li План расстановки мебели
+                                    li План демонтажный
+                                    li План монтажный
+                                    li План полов с материалами
+                                    li План экспликации
+                                    li -
+                                    li -
+                                    li -
+                        button.prices__button.prices__button-pro(type="button") Заказать
+                    .prices__item
+                        div.prices__container
+                            div
+                                .prices__header exclusive
+                                p от 5000 ₽
+                                span.accordion__title.prices__btn Показать больше
+                            .prices__text
+                                ul.prices__list 
+                                    li Обмерочный план
+                                    li План расстановки мебели
+                                    li План демонтажный
+                                    li План монтажный
+                                    li План полов с материалами
+                                    li -
+                                    li План экспликации
+                                    li Чертежи сложных элементов и мебели (если заказывать отдельно - расчет индивидуальный)
+                                    li Спецификация осветительного оборудования
+                        button.prices__button(type="button") Заказать
+        .projects.container 
+            h3.title-h3.projects__title похожие проекты
 
-    include pug/modules/carousel.pug
-    include pug/modules/request.pug
-    include pug/modules/footer.pug
-    .popup__bg#popup__bg
-      .popup
-        img.popup__close(src="./img/pop-up/close.svg" alt="close")
-        h3.title-h3.popup__title оставЬТЕ СВОИ КОНТАКТЫ. мЫ СВЯЖЕМСЯ С ВАМИ И ОБСУДИМ ВАШ ПРОЕКТ
-        form.popup__form(action="#") 
-          .form-item.popup__form-item 
-            span.form-item__placeholder Ваше имя
-            input.form-item__input.form-item__field(type="text")
-          .form-item.popup__form-item  
-            span.form-item__placeholder Ваш email
-            input.form-item__input.form-item__field(type="email")
-        .form__info 
-          button.button(type="submit") Отправить
-          p   Нажимая на кнопку, я даю 
-            a(href="#") согласие 
-            a(href="#") на обработку персональных данных
-
-
-
+        include pug/modules/carousel.pug
+        include pug/modules/request.pug
+        include pug/modules/footer.pug
+        .popup__bg#popup__bg
+            .popup
+                img.popup__close(src="./img/pop-up/close.svg" alt="close")
+                h3.title-h3.popup__title оставЬТЕ СВОИ КОНТАКТЫ. мЫ СВЯЖЕМСЯ С ВАМИ И ОБСУДИМ ВАШ ПРОЕКТ
+                form.popup__form(action="#") 
+                    .form-item.popup__form-item 
+                        span.form-item__placeholder Ваше имя
+                        input.form-item__input.form-item__field(type="text")
+                    .form-item.popup__form-item  
+                        span.form-item__placeholder Ваш email
+                        input.form-item__input.form-item__field(type="email")
+                .form__info 
+                    button.button(type="submit") Отправить
+                    p   Нажимая на кнопку, я даю 
+                        a(href="#") согласие 
+                        a(href="#") на обработку персональных данных
 
 
 
 
 
-    script(src="./js/main.min.js")
+
+
+
+        script(src="./js/main.min.js")

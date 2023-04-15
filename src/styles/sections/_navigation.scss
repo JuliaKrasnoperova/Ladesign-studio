@@ -1,44 +1,51 @@
 .navigation {
-    padding-top: 45px;
-    padding-bottom: 45px;
-    border-bottom: 1px solid #D5D5D5;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #d5d5d5;
 }
 
 .navigation__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation__list {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 50px;
+  @include tablet {
+    gap: 20px;
+  }
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .navigation__link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: #777777;
-    transition: 0.2s;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #777777;
+  transition: 0.2s;
 
-    &:hover {
-        color: #777777;
-    }
+  &:hover {
+    color: #777777;
+  }
 }
 
 .navigation__tel {
-    position: relative;
+  position: relative;
 }
 
 .navigation__tel a::before {
-    content: "";
-    background-image: url(../img/header/tel.svg);
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 23px;
-    height: 25px;
-    top: -6px;
-    left: -31px;
+  content: "";
+  background-image: url(../img/header/tel.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 25px;
+  top: -6px;
+  left: -31px;
 }

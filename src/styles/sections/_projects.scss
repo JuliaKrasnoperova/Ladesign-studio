@@ -1,14 +1,20 @@
 .projects {
-    padding-top: 150px;
-    text-align: center;
+  padding-top: 150px;
+  text-align: center;
+  @include tablet {
+    padding-top: 70px;
+  }
 }
 
 .projects__title {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
+  @include tablet {
+    margin-bottom: 30px;
+  }
 }
 
 .projects__wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }

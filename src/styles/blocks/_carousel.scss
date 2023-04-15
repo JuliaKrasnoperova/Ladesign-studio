@@ -1,12 +1,19 @@
 .carousel__wrapper {
+  max-width: 1230px;
   position: relative;
-  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  @include laptop {
+    max-width: 1024px;
+  }
+  @include laptop-940 {
+    max-width: 940px;
+  }
 }
 
 .carousel__line {
   display: flex;
+  justify-content: center;
   transition: all 1s;
 }
 
@@ -18,6 +25,24 @@
 .carousel__item img {
   width: 270px;
   height: auto;
+}
+
+.carousel__item img:nth-child(4) {
+  @include laptop {
+    display: none;
+  }
+}
+
+.carousel__item img:nth-child(3) {
+  @include laptop-940 {
+    display: none;
+  }
+}
+
+.carousel__item img:nth-child(2) {
+  @include mobile-550 {
+    display: none;
+  }
 }
 
 .carousel__arrow {
@@ -34,10 +59,22 @@
 }
 
 .carousel__arrow-prev {
-  left: 1%;
+  left: 3%;
+  @include laptop-940 {
+    left: 119px;
+  }
+  @include tablet {
+    display: none;
+  }
 }
 .carousel__arrow-next {
   right: 1%;
+  @include laptop-940 {
+    right: 119px;
+  }
+  @include tablet {
+    display: none;
+  }
 }
 
 .carousel__arrow-prev:active,

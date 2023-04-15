@@ -26,14 +26,17 @@
 
   @include laptop {
     max-width: 930px;
+    margin: 0 auto;
   }
 
   @include tablet {
     max-width: 678px;
+    margin: 0 auto;
   }
 
   @include mobile {
     width: 100%;
+    margin: 0 auto;
   }
 }
 
