@@ -1,45 +1,72 @@
 .info {
-    padding-top: 100px;
+  padding-top: 100px;
+  @include tablet-700 {
+    padding-top: 70px;
+  }
 }
 
 .info__title {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .info__wrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  gap: 100px;
+  @include laptop {
+    gap: 30px;
+  }
+
+  @include mobile-550 {
+    flex-direction: column;
+  }
 }
 
 .info__text-title {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .info__text {
-    text-align: justify;
-    width: 483px;
+  text-align: justify;
+  width: 483px;
+  @include mobile-550 {
+    width: 100%;
+  }
 }
-
 .info__text p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #777777;
-    margin-bottom: 10px;
-
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777777;
+  margin-bottom: 10px;
 }
 
 .info__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
 .info__text p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .info__bg {
-    padding-top: 100px;
+  padding-top: 100px;
+}
+
+.info__bg img {
+  height: 800px;
+  object-fit: contain;
+
+  @include laptop {
+    height: 600px;
+  }
+
+  @include tablet {
+    height: 500px;
+  }
+  @include mobile {
+    height: 250px;
+  }
 }

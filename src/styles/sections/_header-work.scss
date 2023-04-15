@@ -1,44 +1,59 @@
 .header-work {
-    height: 800px;
-    position: relative;
-    background-image: url(./../img/work/bg.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 75px;
+  height: 800px;
+  position: relative;
+  background-image: url(./../img/work/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 150px;
+  @include laptop {
+    background-image: url(./../img/work/bg-1024.png);
+    height: 600px;
+  }
+  @include tablet {
+    margin-bottom: 70px;
+    background-image: url(./../img/work/bg-tablet.png);
+  }
+  @include mobile-550 {
+    background-image: url(./../img/work/bg-mobile.png);
+  }
 }
 
 .header-work::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .header-work__title {
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 1.175;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin-bottom: 26px;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.175;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 26px;
 }
 
 .header-work__description {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.35;
-    text-transform: uppercase;
-    color: #FFFFFF;
-
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .header-work__content {
-    text-align: center;
-    position: relative;
-    padding-top: 250px;
-
+  text-align: center;
+  position: relative;
+  padding-top: 250px;
+  @include laptop {
+    padding-top: 145px;
+  }
+  @include mobile-550 {
+    padding-top: 135px;
+  }
 }

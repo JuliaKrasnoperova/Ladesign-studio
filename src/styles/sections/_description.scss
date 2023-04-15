@@ -1,62 +1,68 @@
-.description {
-    padding-top: 25px;
-    padding-bottom: 100px;
-}
-
 .description__title {
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 1.5;
-    text-transform: uppercase;
-    color: #3D3D3D;
-    margin-bottom: 47px;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  margin-bottom: 47px;
 }
 
 .description__wrapper {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  gap: 102px;
+  margin-bottom: 120px;
+  @include laptop {
+    gap: 30px;
+    margin-bottom: 108px;
+  }
+  @include tablet-700 {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
 }
 
 .description__table,
 .description__text {
-    width: 487px;
+  width: 487px;
+  @include tablet-700 {
+    width: 100%;
+  }
 }
 
 .description__text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #777777;
-    text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777777;
+  text-align: justify;
 }
 
 .description__table-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding-bottom: 24px;
-    padding-top: 24px;
-    border-bottom: 1px solid #D5D5D5;
-
+  padding-bottom: 24px;
+  padding-top: 24px;
+  border-bottom: 1px solid #d5d5d5;
 }
 
 .description__table .description__table-item:first-child {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .description__table-header {
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: #878787;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #878787;
 }
 
 .description__table-item span {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #393246;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #393246;
 }

@@ -59,7 +59,7 @@
 }
 
 .carousel__arrow-prev {
-  left: 3%;
+  left: 55px;
   @include laptop-940 {
     left: 119px;
   }
@@ -68,7 +68,7 @@
   }
 }
 .carousel__arrow-next {
-  right: 1%;
+  right: 55px;
   @include laptop-940 {
     right: 119px;
   }

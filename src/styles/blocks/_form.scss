@@ -2,6 +2,9 @@
   width: 513px;
   font-family: "Roboto";
   margin-bottom: 44px;
+  @include laptop-940 {
+    width: 100%;
+  }
 }
 
 .form .form-item:last-child {
