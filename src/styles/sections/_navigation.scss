@@ -37,6 +37,11 @@
 
 .navigation__tel {
   position: relative;
+  @include mobile-550 {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+  }
 }
 
 .navigation__tel a::before {

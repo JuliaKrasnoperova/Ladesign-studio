@@ -50,3 +50,11 @@
 .nav__tel-black a {
   position: relative;
 }
+
+.nav__tel {
+  @include mobile-550 {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+  }
+}

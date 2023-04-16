@@ -1,4 +1,3 @@
-
 // form placeholder
 const formItems = document.querySelectorAll(".form-item__field");
 
@@ -19,12 +18,12 @@ for (let item of formItems) {
     }
   });
 }
+
 // Atttach files
 window.onload = () => {
   const uploadFile = document.getElementById("form__upload-file");
   const uploadBtn = document.getElementById("form__upload-btn");
   const uploadText = document.getElementById("form__upload-text");
-
 
   // Иммитируем нажатие по нашей скрытой кнопке закгрузке файлов
   if (uploadBtn) {
@@ -45,9 +44,23 @@ window.onload = () => {
     });
   }
 
-    // Preloader
-    let preloader = document.getElementById("preloader");
-    preloader.style.display = "none";
+  // Preloader
+  let preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+
+  // Анимация меню при клике
+  const navIcon = document.querySelector(".nav-icon");
+  const pageBody = document.body;
+
+  navIcon.addEventListener("click", function () {
+    document
+      .querySelector(".nav-icon__middle")
+      .classList.toggle("nav-icon-active");
+    // document
+    //   .querySelector(".header-nav-mobile")
+    //   .classList.toggle("header-nav-mobile--active");
+    // pageBody.classList.toggle("locked");
+  });
 };
 
 // pop-up
@@ -121,6 +134,7 @@ function activeTabContent(tabName) {
     }
   });
 }
+
 // Carousel
 const carouselImages = document.querySelectorAll(".carousel__item");
 const carouselLine = document.querySelector(".carousel__line");
