@@ -67,7 +67,7 @@
     height: 320px;
   }
   @include mobile-550 {
-    width: 100%;
+    width: 290px;
     height: 290px;
   }
 }
@@ -83,7 +83,7 @@
     height: 320px;
   }
   @include mobile-550 {
-    width: 100%;
+    width: 290px;
     height: 290px;
   }
 }
@@ -101,7 +101,7 @@
     height: 320px;
   }
   @include mobile-550 {
-    width: 100%;
+    width: 290px;
     height: 290px;
   }
 }
@@ -117,7 +117,7 @@
     height: 320px;
   }
   @include mobile-550 {
-    width: 100%;
+    width: 290px;
     height: 290px;
   }
 }
@@ -134,8 +134,7 @@
     height: 320px;
   }
   @include mobile-550 {
-    max-width: 290px;
-    width: 100%;
+    width: 290px;
     height: 220px;
   }
 }
