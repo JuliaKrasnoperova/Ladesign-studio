@@ -1,4 +1,11 @@
-window.onload = function () {
+let preloader = document.getElementById("preloader");
+if (document.contains(preloader)) {
+  window.onload = function () {
+    preloader.style.display = "none";
+  };
+}
+
+window.addEventListener("DOMContentLoaded", () => {
   // Mobile Menu
   const navIcon = document.querySelector(".nav-icon");
   const pageBody = document.body;
@@ -57,37 +64,36 @@ window.onload = function () {
     });
   }
 
-  // Preloader
-  let preloader = document.getElementById("preloader");
-  preloader.style.display = "none";
+  const popUpBg = document.querySelector(".popup__bg");
+  if (document.contains(popUpBg)) {
+    // pop-up
+    let popupBg = document.querySelector("#popup__bg");
+    let popup = document.querySelector(".popup");
+    let openPopupButtons = document.querySelectorAll("#popup__open");
+    let closePopupButton = document.querySelector(".popup__close");
+    let body = document.querySelector("body");
 
-  // pop-up
-  let popupBg = document.querySelector("#popup__bg");
-  let popup = document.querySelector(".popup");
-  let openPopupButtons = document.querySelectorAll("#popup__open");
-  let closePopupButton = document.querySelector(".popup__close");
-  let body = document.querySelector("body");
-
-  openPopupButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
-      popupBg.classList.add("active");
-      popup.classList.add("popup__active");
-      body.classList.add("locked");
+    openPopupButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        popupBg.classList.add("active");
+        popup.classList.add("popup__active");
+        body.classList.add("locked");
+      });
     });
-  });
-  closePopupButton.addEventListener("click", () => {
-    popupBg.classList.remove("active");
-    popup.classList.remove("popup__active");
-    body.classList.remove("locked");
-  });
-  document.addEventListener("click", (e) => {
-    if (e.target === popupBg) {
+    closePopupButton.addEventListener("click", () => {
       popupBg.classList.remove("active");
       popup.classList.remove("popup__active");
       body.classList.remove("locked");
-    }
-  });
+    });
+    document.addEventListener("click", (e) => {
+      if (e.target === popupBg) {
+        popupBg.classList.remove("active");
+        popup.classList.remove("popup__active");
+        body.classList.remove("locked");
+      }
+    });
+  }
 
   // Accordion index
   const accordionTitles = document.querySelectorAll(".accordion__title");
@@ -133,139 +139,150 @@ window.onload = function () {
     });
   }
 
-  // Carousel
-  const carouselImages = document.querySelectorAll(".carousel__item");
-  const carouselLine = document.querySelector(".carousel__line");
-  const carouselDots = document.querySelectorAll(".carousel__dot");
-  const carouselBtnNext = document.querySelector(".carousel__arrow-next");
-  const carouselBtnPrev = document.querySelector(".carousel__arrow-prev");
+  const carousel = document.querySelector(".carousel");
+  if (document.contains(carousel)) {
+    // Carousel
+    const carouselImages = document.querySelectorAll(".carousel__item");
+    const carouselLine = document.querySelector(".carousel__line");
+    const carouselDots = document.querySelectorAll(".carousel__dot");
+    const carouselBtnNext = document.querySelector(".carousel__arrow-next");
+    const carouselBtnPrev = document.querySelector(".carousel__arrow-prev");
 
-  let carouselCount = 0;
-  let carouselWidth;
+    let carouselCount = 0;
+    let carouselWidth;
 
-  // Адаптивность слайдера
-  window.addEventListener("resize", showCarousel);
+    // Адаптивность слайдера
+    window.addEventListener("resize", showCarousel);
 
-  // Кнопки слайдов вперед и назад
-  carouselBtnNext.addEventListener("click", nextBtn);
-  carouselBtnPrev.addEventListener("click", prevBtn);
+    // Кнопки слайдов вперед и назад
+    carouselBtnNext.addEventListener("click", nextBtn);
+    carouselBtnPrev.addEventListener("click", prevBtn);
 
-  function showCarousel() {
-    carouselWidth = document.querySelector(".carousel__wrapper").offsetWidth;
-    carouselLine.style.width = carouselWidth * carouselImages.length + "px";
-    carouselImages.forEach((item) => (item.style.width = carouselWidth + "px"));
+    function showCarousel() {
+      carouselWidth = document.querySelector(".carousel__wrapper").offsetWidth;
+      carouselLine.style.width = carouselWidth * carouselImages.length + "px";
+      carouselImages.forEach(
+        (item) => (item.style.width = carouselWidth + "px")
+      );
 
-    rollcarousel();
-  }
+      rollcarousel();
+    }
 
-  showCarousel();
+    showCarousel();
 
-  // Перелистывает слад вперед
-  function nextBtn() {
-    carouselCount++;
-    if (carouselCount >= carouselImages.length) carouselCount = 0;
+    // Перелистывает слад вперед
+    function nextBtn() {
+      carouselCount++;
+      if (carouselCount >= carouselImages.length) carouselCount = 0;
 
-    rollcarousel();
-    thisCarousel(carouselCount);
-  }
-
-  // Перелистывает слад назад
-  function prevBtn() {
-    carouselCount--;
-    if (carouselCount < 0) carouselCount = carouselImages.length - 1;
-
-    rollcarousel();
-    thisCarousel(carouselCount);
-  }
-
-  // Задает шаг перемещения сладов
-  function rollcarousel() {
-    carouselLine.style.transform = `translateX(${
-      -carouselCount * carouselWidth
-    }px)`;
-  }
-
-  // Указывает какой слайд по счету активен
-
-  function thisCarousel(index) {
-    carouselDots.forEach((item) =>
-      item.classList.remove("carousel__dot-active")
-    );
-    carouselDots[index].classList.add("carousel__dot-active");
-  }
-
-  // Вешаем клик на dot
-  carouselDots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      carouselCount = index;
       rollcarousel();
       thisCarousel(carouselCount);
+    }
+
+    // Перелистывает слад назад
+    function prevBtn() {
+      carouselCount--;
+      if (carouselCount < 0) carouselCount = carouselImages.length - 1;
+
+      rollcarousel();
+      thisCarousel(carouselCount);
+    }
+
+    // Задает шаг перемещения сладов
+    function rollcarousel() {
+      carouselLine.style.transform = `translateX(${
+        -carouselCount * carouselWidth
+      }px)`;
+    }
+
+    // Указывает какой слайд по счету активен
+
+    function thisCarousel(index) {
+      carouselDots.forEach((item) =>
+        item.classList.remove("carousel__dot-active")
+      );
+      carouselDots[index].classList.add("carousel__dot-active");
+    }
+
+    // Вешаем клик на dot
+    carouselDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        carouselCount = index;
+        rollcarousel();
+        thisCarousel(carouselCount);
+      });
     });
-  });
-
-  // Slider
-  const sliderImages = document.querySelectorAll(".slider__item");
-  const sliderLine = document.querySelector(".slider__line");
-  const sliderDots = document.querySelectorAll(".slider__dot");
-  const sliderBtnNext = document.querySelector(".slider__arrow-next");
-  const sliderBtnPrev = document.querySelector(".slider__arrow-prev");
-
-  let sliderCount = 0;
-  let sliderWidth;
-
-  // Адаптивность слайдера
-  window.addEventListener("resize", showSlide);
-
-  // Кнопки слайдов вперед и назад
-  sliderBtnNext.addEventListener("click", nextSlide);
-  sliderBtnPrev.addEventListener("click", prevSlide);
-
-  function showSlide() {
-    sliderWidth = document.querySelector(".slider__wrapper").offsetWidth;
-    sliderLine.style.width = sliderWidth * sliderImages.length + "px";
-    sliderImages.forEach((item) => (item.style.width = sliderWidth + "px"));
-
-    rollSlider();
   }
 
-  showSlide();
+  const slider = document.querySelector(".slider");
 
-  // Перелистывает слад вперед
-  function nextSlide() {
-    sliderCount++;
-    if (sliderCount >= sliderImages.length) sliderCount = 0;
+  if (document.contains(slider)) {
+    // Slider
+    const sliderImages = document.querySelectorAll(".slider__item");
+    const sliderLine = document.querySelector(".slider__line");
+    const sliderDots = document.querySelectorAll(".slider__dot");
+    const sliderBtnNext = document.querySelector(".slider__arrow-next");
+    const sliderBtnPrev = document.querySelector(".slider__arrow-prev");
 
-    rollSlider();
-    thisSlide(sliderCount);
-  }
+    let sliderCount = 0;
+    let sliderWidth;
 
-  // Перелистывает слад назад
-  function prevSlide() {
-    sliderCount--;
-    if (sliderCount < 0) sliderCount = sliderImages.length - 1;
+    // Адаптивность слайдера
+    window.addEventListener("resize", showSlide);
 
-    rollSlider();
-    thisSlide(sliderCount);
-  }
+    // Кнопки слайдов вперед и назад
+    sliderBtnNext.addEventListener("click", nextSlide);
+    sliderBtnPrev.addEventListener("click", prevSlide);
 
-  // Задает шаг перемещения сладов
-  function rollSlider() {
-    sliderLine.style.transform = `translateX(${-sliderCount * sliderWidth}px)`;
-  }
+    function showSlide() {
+      sliderWidth = document.querySelector(".slider__wrapper").offsetWidth;
+      sliderLine.style.width = sliderWidth * sliderImages.length + "px";
+      sliderImages.forEach((item) => (item.style.width = sliderWidth + "px"));
 
-  // Указывает какой слайд по счету активен
+      rollSlider();
+    }
 
-  function thisSlide(index) {
-    sliderDots.forEach((item) => item.classList.remove("slider__dot-active"));
-    sliderDots[index].classList.add("slider__dot-active");
-  }
+    showSlide();
 
-  // Вешаем клик на dot
-  sliderDots.forEach(function (dot, index) {
-    dot.addEventListener("click", function () {
-      sliderCount = index;
+    // Перелистывает слад вперед
+    function nextSlide() {
+      sliderCount++;
+      if (sliderCount >= sliderImages.length) sliderCount = 0;
+
       rollSlider();
       thisSlide(sliderCount);
+    }
+
+    // Перелистывает слад назад
+    function prevSlide() {
+      sliderCount--;
+      if (sliderCount < 0) sliderCount = sliderImages.length - 1;
+
+      rollSlider();
+      thisSlide(sliderCount);
+    }
+
+    // Задает шаг перемещения сладов
+    function rollSlider() {
+      sliderLine.style.transform = `translateX(${
+        -sliderCount * sliderWidth
+      }px)`;
+    }
+
+    // Указывает какой слайд по счету активен
+
+    function thisSlide(index) {
+      sliderDots.forEach((item) => item.classList.remove("slider__dot-active"));
+      sliderDots[index].classList.add("slider__dot-active");
+    }
+
+    // Вешаем клик на dot
+    sliderDots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        sliderCount = index;
+        rollSlider();
+        thisSlide(sliderCount);
+      });
     });
-  });
-};
+  }
+});

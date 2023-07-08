@@ -3,9 +3,11 @@
   position: relative;
   margin: 0 auto;
   overflow: hidden;
+
   @include laptop {
     max-width: 1024px;
   }
+
   @include laptop-940 {
     max-width: 940px;
   }
@@ -22,6 +24,7 @@
   gap: 20px;
   justify-content: center;
 }
+
 .carousel__item img {
   width: 270px;
   height: auto;
@@ -60,27 +63,34 @@
 
 .carousel__arrow-prev {
   left: 55px;
+
   @include laptop-940 {
     left: 119px;
   }
+
   @include tablet {
     display: none;
   }
 }
+
 .carousel__arrow-next {
   right: 55px;
+
   @include laptop-940 {
     right: 119px;
   }
+
   @include tablet {
     display: none;
   }
 }
 
 .carousel__arrow-prev:active,
-.slider__arrow-next:active {
+.carousel__arrow-next:active {
   transform: scale(0.8);
 }
+
+
 .carousel__pagination {
   display: flex;
   justify-content: center;
